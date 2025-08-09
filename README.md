@@ -1,7 +1,7 @@
 # Atividade para a disciplina PROGRAMAÇÃO WEB II do Instituto Federal Catarinense - Campus Fraiburgo.
 
 
-## Requisitos
+## Requisitos para realizar o projeto:
 
 * Python 3 ou superior - Conferir a versão: python --version
 * Django 5 ou superior - Conferir a versão: django-admin --version
