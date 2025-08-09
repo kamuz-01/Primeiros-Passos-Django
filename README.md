@@ -78,7 +78,6 @@ from django.urls import path, include
 urlpatterns = [
     path('', include('pagina_inicial.urls')),
 ]
-
 ```
 
 ### Como rodar o projeto baixado
