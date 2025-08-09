@@ -35,6 +35,13 @@
 
 #### Adicionar 'pagina_inicial' ao INSTALLED_APPS em meu_site/settings.py
 
+```
+INSTALLED_APPS = [
+    ...
+    'pagina_inicial',
+]
+```
+
 #### Crie as views em pagina_inicial/views.py
 
 ```
