@@ -6,34 +6,34 @@
 
 ## Sequencia para criar o projeto
 
-### Criar o ambiente virtual
+### 1) Criar o ambiente virtual
 
 * python -m venv venv
 
 
-### Ativar o ambiente virtual
+### 2) Ativar o ambiente virtual
 
 * venv\Scripts\Activate
 
 
-### Com o venv ativado, instalar o Django
+### 3) Com o venv ativado, instalar o Django
 
 * pip install Django
 
 
-### Criar o projeto com Django
+### 4) Criar o projeto com Django
 
 * django-admin startproject meu_site .
 
 
-### Criar app pagina_inicial
+### 5) Criar app pagina_inicial
 
 * python manage.py startapp pagina_inicial
 
 
-### Configurar o projeto (views e rotas)
+### 6) Configurar o projeto (views e rotas)
 
-#### Adicionar 'pagina_inicial' ao INSTALLED_APPS em meu_site/settings.py
+#### - Adicionar 'pagina_inicial' ao INSTALLED_APPS em meu_site/settings.py
 
 ```
 INSTALLED_APPS = [
@@ -42,7 +42,7 @@ INSTALLED_APPS = [
 ]
 ```
 
-#### Crie as views em pagina_inicial/views.py
+#### - Crie as views em pagina_inicial/views.py
 
 ```
 from django.http import HttpResponse
@@ -55,7 +55,7 @@ def contato(request):
 ```
 
 
-### Crie pagina_inicial/urls.py
+#### - Crie pagina_inicial/urls.py
 
 ```
 from django.urls import path
@@ -88,5 +88,5 @@ urlpatterns = [
 * http://127.0.0.1:8000/home/
 
 
-*http://127.0.0.1:8000/contato/
+* http://127.0.0.1:8000/contato/
 
