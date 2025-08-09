@@ -13,27 +13,23 @@
 
 ### Ativar o ambiente virtual
 
-´´´
-venv\Scripts\Activate
-´´´
+* venv\Scripts\Activate
+
 
 ### Com o venv ativado, instalar o Django
 
-´´´
-pip install Django
-´´´
+* pip install Django
+
 
 ### Criar o projeto com Django
 
-´´´
-django-admin startproject meu_site .
-´´´
+* django-admin startproject meu_site .
+
 
 ### Criar app pagina_inicial
 
-´´´
-python manage.py startapp pagina_inicial
-´´´
+* python manage.py startapp pagina_inicial
+
 
 ### Configurar o projeto (views e rotas)
 
@@ -41,7 +37,7 @@ python manage.py startapp pagina_inicial
 
 #### Crie as views em pagina_inicial/views.py
 
-´´´
+```
 from django.http import HttpResponse
 
 def home(request):
@@ -49,11 +45,12 @@ def home(request):
 
 def contato(request):
     return HttpResponse("Página de Contato")
-´´´
+```
+
 
 ### Crie pagina_inicial/urls.py
 
-´´´
+```
 from django.urls import path
 from . import views
 
@@ -61,28 +58,28 @@ urlpatterns = [
     path('home/', views.home),
     path('contato/', views.contato),
 ]
-´´´
+```
 
 ### Atualize meu_site/urls.py
 
-´´´
+```
 from django.urls import path, include
 
 urlpatterns = [
     path('', include('pagina_inicial.urls')),
 ]
 
-´´´
+```
 
 ## Como rodar o projeto baixado
 
-´´´
-python manage.py runserver
-´´´
+* python manage.py runserver
 
-Acessar às páginas criadas com Django.
-´´´
-http://127.0.0.1:8000/home/
 
-http://127.0.0.1:8000/contato/
-´´´
+## Acessar às páginas criadas com Django.
+
+* http://127.0.0.1:8000/home/
+
+
+*http://127.0.0.1:8000/contato/
+
