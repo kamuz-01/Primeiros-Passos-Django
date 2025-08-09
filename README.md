@@ -8,9 +8,8 @@
 
 ### Criar o ambiente virtual
 
-´´´
-python -m venv venv
-´´´
+* python -m venv venv
+
 
 ### Ativar o ambiente virtual
 
