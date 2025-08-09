@@ -67,7 +67,7 @@ urlpatterns = [
 ]
 ```
 
-### Atualize meu_site/urls.py
+#### - Atualize meu_site/urls.py
 
 ```
 from django.urls import path, include
