@@ -12,7 +12,7 @@
 python -m venv venv
 ´´´
 
-### Ativar o ambiente virtual
+### Ativar o ambiente virtual no windows
 
 ´´´
 venv\Scripts\Activate
