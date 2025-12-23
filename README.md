@@ -1,48 +1,57 @@
-# Requisitos
+# Atividade para a disciplina PROGRAMAÇÃO WEB II do Instituto Federal Catarinense - Campus Fraiburgo (09/08/2025).
+
+
+## Requisitos para realizar o projeto:
 
 * Python 3 ou superior - Conferir a versão: python --version
 * Django 5 ou superior - Conferir a versão: django-admin --version
 * GIT - Conferir a instalação: git -v
 
-## Sequencia para criar o projeto
+### Sequencia para criar o projeto
 
-### Criar o ambiente virtual
+#### 1) Criar o ambiente virtual
 
-´´´
-python -m venv venv
-´´´
+* python -m venv venv
 
+<<<<<<< HEAD
 ### Ativar o ambiente virtual no windows
+=======
+>>>>>>> bf2f3777acd1f546bef4edb661f7b26e794aff74
 
-´´´
-venv\Scripts\Activate
-´´´
+#### 2) Ativar o ambiente virtual
 
-### Com o venv ativado, instalar o Django
+* venv\Scripts\Activate
 
-´´´
-pip install Django
-´´´
 
-### Criar o projeto com Django
+#### 3) Com o venv ativado, instalar o Django
 
-´´´
-django-admin startproject meu_site .
-´´´
+* pip install Django
 
-### Criar app pagina_inicial
 
-´´´
-python manage.py startapp pagina_inicial
-´´´
+#### 4) Criar o projeto com Django
 
-### Configurar o projeto (views e rotas)
+* django-admin startproject meu_site .
 
-#### Adicionar 'pagina_inicial' ao INSTALLED_APPS em meu_site/settings.py
 
-#### Crie as views em pagina_inicial/views.py
+#### 5) Criar app pagina_inicial
 
-´´´
+* python manage.py startapp pagina_inicial
+
+
+#### 6) Configurar o projeto (views e rotas)
+
+##### - Adicionar 'pagina_inicial' ao INSTALLED_APPS em meu_site/settings.py
+
+```
+INSTALLED_APPS = [
+    ...
+    'pagina_inicial',
+]
+```
+
+##### - Crie as views em pagina_inicial/views.py
+
+```
 from django.http import HttpResponse
 
 def home(request):
@@ -50,11 +59,12 @@ def home(request):
 
 def contato(request):
     return HttpResponse("Página de Contato")
-´´´
+```
 
-### Crie pagina_inicial/urls.py
 
-´´´
+##### - Crie pagina_inicial/urls.py
+
+```
 from django.urls import path
 from . import views
 
@@ -62,28 +72,27 @@ urlpatterns = [
     path('home/', views.home),
     path('contato/', views.contato),
 ]
-´´´
+```
 
-### Atualize meu_site/urls.py
+##### - Atualize meu_site/urls.py
 
-´´´
+```
 from django.urls import path, include
 
 urlpatterns = [
     path('', include('pagina_inicial.urls')),
 ]
+```
 
-´´´
+### Como rodar o projeto baixado
 
-## Como rodar o projeto baixado
+* python manage.py runserver
 
-´´´
-python manage.py runserver
-´´´
 
-Acessar às páginas criadas com Django.
-´´´
-http://127.0.0.1:8000/home/
+### Acessar às páginas criadas com Django.
 
-http://127.0.0.1:8000/contato/
-´´´
+* http://127.0.0.1:8000/home/
+
+
+* http://127.0.0.1:8000/contato/
+
